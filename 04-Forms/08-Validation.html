@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Forms</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container mt-4">
+      <div class="row">
+        <div class="col mx-auto">
+          <form class="row g-3 validate" novalidate>
+            <div class="col-md-4">
+              <label for="name" class="form-label">İsim</label>
+              <input type="text" class="form-control" id="name" required />
+              <div class="valid-feedback">İyi Gidiyor :)</div>
+            </div>
+            <div class="col-md-4 position-relative">
+              <label for="last-name" class="form-label">Soyisim</label>
+              <input type="text" class="form-control" id="last-name" required />
+              <div class="valid-tooltip">İyi Gidiyor :)</div>
+            </div>
+            <div class="col-md-4">
+              <label for="user-name" class="form-label">Kullanıcı Adı</label>
+              <div class="input-group has-validation">
+                <span class="input-group-text" id="mail-icon">@</span>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="user-name"
+                  aria-describedby="mail-icon"
+                  required
+                />
+                <div class="invalid-feedback">Kullanıcı adını girmelisin!</div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <label for="city" class="form-label">Şehir</label>
+              <input type="text" class="form-control" id="city" required />
+              <div class="invalid-feedback">Şehrini girmelisin!</div>
+            </div>
+            <div class="col-md-3">
+              <label for="state" class="form-label">Mahalle</label>
+              <select class="form-select" id="state" required>
+                <option selected disabled value="">Seçin...</option>
+                <option>...</option>
+                <option>...</option>
+              </select>
+              <div class="invalid-feedback">Mahelleni seçmelisin!</div>
+            </div>
+            <div class="col-md-3">
+              <label for="zip" class="form-label">Posta Kodu</label>
+              <input type="text" class="form-control" id="zip" required />
+              <div class="invalid-feedback">Posta kodunu girmelisin!</div>
+            </div>
+            <div class="col-12">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="contract"
+                  required
+                />
+                <label class="form-check-label" for="contract">
+                  Şartları kabul ediyorum.
+                </label>
+                <div class="invalid-feedback">
+                  Kabul edecen başka yolu yok :)
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <button class="btn btn-success" type="submit">Gönder</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      (() => {
+        "use strict";
+
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        const forms = document.querySelectorAll(".validate");
+
+        // Loop over them and prevent submission
+        Array.from(forms).forEach((form) => {
+          form.addEventListener(
+            "submit",
+            (event) => {
+              if (!form.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+
+              form.classList.add("was-validated");
+            },
+            false
+          );
+        });
+      })();
+    </script>
+  </body>
+</html>
