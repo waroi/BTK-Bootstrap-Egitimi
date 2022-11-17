@@ -10,11 +10,34 @@
       integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
       crossorigin="anonymous"
     />
+    <style>
+      .custom-popover {
+        --bs-popover-max-width: 200px;
+        --bs-popover-border-color: var(--bs-success);
+        --bs-popover-header-bg: var(--bs-success);
+        --bs-popover-header-color: var(--bs-white);
+        --bs-popover-body-padding-x: 1rem;
+        --bs-popover-body-padding-y: 0.5rem;
+      }
+    </style>
   </head>
   <body>
     <div class="container mt-4">
       <div class="row">
-        <div class="col"></div>
+        <div class="col">
+          <button
+            type="button"
+            class="btn btn-lg btn-danger"
+            data-bs-toggle="popover"
+            data-bs-title="Merhaba Dünyalı"
+            data-bs-content="Oradan herşey nasıl görünüyor?"
+            data-bs-placement="bottom"
+            data-bs-custom-class="custom-popover"
+            data-bs-trigger="focus"
+          >
+            Bana tıkla :)
+          </button>
+        </div>
       </div>
     </div>
     <script
@@ -22,5 +45,16 @@
       integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
       crossorigin="anonymous"
     ></script>
+    <script>
+      const popoverTriggerList = document.querySelectorAll(
+        '[data-bs-toggle="popover"]'
+      );
+      const popoverList = [...popoverTriggerList].map(
+        (popoverTriggerEl) => new bootstrap.Popover(popoverTriggerEl)
+      );
+      const popover = new bootstrap.Popover(".example-popover", {
+        container: ".modal-body",
+      });
+    </script>
   </body>
 </html>
