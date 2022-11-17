@@ -10,11 +10,27 @@
       integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
       crossorigin="anonymous"
     />
+    <style>
+      .custom-tooltip {
+        --bs-tooltip-bg: var(--bs-success);
+      }
+    </style>
   </head>
   <body>
     <div class="container mt-4">
       <div class="row">
-        <div class="col"></div>
+        <div class="col">
+          <button
+            type="button"
+            class="btn btn-success"
+            data-bs-toggle="tooltip"
+            data-bs-placement="bottom"
+            data-bs-custom-class="custom-tooltip"
+            data-bs-title="Burası bir açıklama bölümü."
+          >
+            Göster
+          </button>
+        </div>
       </div>
     </div>
     <script
@@ -23,15 +39,12 @@
       crossorigin="anonymous"
     ></script>
     <script>
-      const errorButton = document.getElementById("errorButton");
-      const myToast = document.getElementById("myToast");
-      if (errorButton) {
-        errorButton.addEventListener("click", () => {
-          const toast = new bootstrap.Toast(myToast);
-
-          toast.show();
-        });
-      }
+      const tooltipTriggerList = document.querySelectorAll(
+        '[data-bs-toggle="tooltip"]'
+      );
+      const tooltipList = [...tooltipTriggerList].map(
+        (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
+      );
     </script>
   </body>
 </html>
