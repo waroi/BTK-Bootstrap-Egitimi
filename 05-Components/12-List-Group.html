@@ -14,7 +14,196 @@
   <body>
     <div class="container mt-4">
       <div class="row">
-        <div class="col"></div>
+        <div class="col">
+          <ul class="list-group w-25">
+            <li class="list-group-item active">Liste Elemanı 1</li>
+            <li class="list-group-item">Liste Elemanı 2</li>
+            <li class="list-group-item disabled">Liste Elemanı 3</li>
+            <li class="list-group-item">Liste Elemanı 4</li>
+            <li class="list-group-item">Liste Elemanı 5</li>
+          </ul>
+          <hr />
+          <div class="list-group w-25">
+            <a href="#" class="list-group-item list-group-item-action"
+              >Liste Elemanı 1</a
+            >
+            <a href="#" class="list-group-item list-group-item-action"
+              >Liste Elemanı 2</a
+            >
+            <a href="#" class="list-group-item list-group-item-action"
+              >Liste Elemanı 3</a
+            >
+            <a href="#" class="list-group-item list-group-item-action"
+              >Liste Elemanı 4</a
+            >
+          </div>
+          <hr />
+          <div class="list-group list-group-flush list-group-numbered w-25">
+            <button class="list-group-item list-group-item-action">
+              Liste Elemanı 1
+            </button>
+            <button class="list-group-item list-group-item-action">
+              Liste Elemanı 2
+            </button>
+            <button class="list-group-item list-group-item-action">
+              Liste Elemanı 3
+            </button>
+            <button class="list-group-item list-group-item-action">
+              Liste Elemanı 4
+            </button>
+          </div>
+          <hr />
+          <ul class="list-group list-group-numbered w-25">
+            <li
+              class="list-group-item active d-flex justify-content-between align-items-start"
+            >
+              Liste Elemanı 1
+              <span class="badge bg-danger rounded-pill">14</span>
+            </li>
+            <li
+              class="list-group-item d-flex justify-content-between align-items-start"
+            >
+              Liste Elemanı 2
+              <span class="badge bg-primary rounded-pill">4</span>
+            </li>
+            <li
+              class="list-group-item disabled d-flex justify-content-between align-items-start"
+            >
+              Liste Elemanı 3
+              <span
+                class="badge bg-primary rounded-pill d-flex justify-content-between align-items-start"
+                >12</span
+              >
+            </li>
+            <li
+              class="list-group-item d-flex justify-content-between align-items-start"
+            >
+              Liste Elemanı 4
+              <span class="badge bg-primary rounded-pill">7</span>
+            </li>
+            <li
+              class="list-group-item d-flex justify-content-between align-items-start"
+            >
+              Liste Elemanı 5
+              <span class="badge bg-primary rounded-pill">34</span>
+            </li>
+          </ul>
+          <hr />
+          <ul class="list-group list-group-horizontal">
+            <li class="list-group-item list-group-item-success">An item</li>
+            <li class="list-group-item list-group-item-danger">
+              A second item
+            </li>
+            <li class="list-group-item list-group-item-warning">
+              A third item
+            </li>
+          </ul>
+          <hr />
+          <div class="list-group w-25">
+            <a href="#" class="list-group-item list-group-item-action active">
+              <div class="d-flex w-100 justify-content-between mb-1">
+                <h5>Başlık</h5>
+                <small>3 gün önce</small>
+              </div>
+              <p class="mb-1">Lorem ipsum dolor sit amet.</p>
+              <small>Lorem ipsum dolor sit amet.</small>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action">
+              <div class="d-flex w-100 justify-content-between mb-1">
+                <h5>Başlık</h5>
+                <small>3 gün önce</small>
+              </div>
+              <p class="mb-1">Lorem ipsum dolor sit amet.</p>
+              <small>Lorem ipsum dolor sit amet.</small>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action">
+              <div class="d-flex w-100 justify-content-between mb-1">
+                <h5>Başlık</h5>
+                <small>3 gün önce</small>
+              </div>
+              <p class="mb-1">Lorem ipsum dolor sit amet.</p>
+              <small>Lorem ipsum dolor sit amet.</small>
+            </a>
+          </div>
+          <hr />
+          <ul class="list-group w-25">
+            <li class="list-group-item">
+              <input
+                class="form-check-input me-1"
+                type="checkbox"
+                value=""
+                id="firstCheckbox"
+              />
+              <label class="form-check-label stretched-link" for="firstCheckbox"
+                >First checkbox</label
+              >
+            </li>
+            <li class="list-group-item">
+              <input
+                class="form-check-input me-1"
+                type="checkbox"
+                value=""
+                id="secondCheckbox"
+              />
+              <label
+                class="form-check-label stretched-link"
+                for="secondCheckbox"
+                >Second checkbox</label
+              >
+            </li>
+            <li class="list-group-item">
+              <input
+                class="form-check-input me-1"
+                type="checkbox"
+                value=""
+                id="thirdCheckbox"
+              />
+              <label class="form-check-label stretched-link" for="thirdCheckbox"
+                >Third checkbox</label
+              >
+            </li>
+          </ul>
+          <hr />
+          <ul class="list-group w-25">
+            <li class="list-group-item">
+              <input
+                class="form-check-input me-1"
+                type="radio"
+                value=""
+                name="radio-list"
+                id="firstradio"
+              />
+              <label class="form-check-label stretched-link" for="firstradio"
+                >First checkbox</label
+              >
+            </li>
+            <li class="list-group-item">
+              <input
+                class="form-check-input me-1"
+                type="radio"
+                name="radio-list"
+                value=""
+                id="secondradio"
+              />
+              <label class="form-check-label stretched-link" for="secondradio"
+                >Second checkbox</label
+              >
+            </li>
+            <li class="list-group-item">
+              <input
+                class="form-check-input me-1"
+                type="radio"
+                name="radio-list"
+                value=""
+                id="thirdradio"
+              />
+              <label class="form-check-label stretched-link" for="thirdradio"
+                >Third checkbox</label
+              >
+            </li>
+          </ul>
+          <hr />
+        </div>
       </div>
     </div>
     <script
