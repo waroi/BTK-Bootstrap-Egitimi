@@ -1,0 +1,41 @@
+$bgColor: red;
+$w150: 150px;
+$w100: 100px;
+
+.container{
+  display: flex;
+  div{
+    margin: 5px;
+    &.box1{
+      background-color: $bgColor;
+      width: $w150;
+      height: $w100;
+    }
+  }
+}
+
+@mixin deneme($color, $w, $h) {
+  background-color: $color;
+  margin: 10px;
+  width: $w;
+  height: $h;
+}
+
+.box1{
+  @include deneme(blue, $w150, $w100)
+}
+
+.box2{
+  @extend .box1;
+  width: $w100*2 !important;
+  background-color: $bgColor;
+}
+
+.box3{
+  @extend .box2;
+}
+
+.box4{
+  @include deneme(green, $w100, $w150)
+}
+
