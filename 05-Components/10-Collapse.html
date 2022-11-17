@@ -14,7 +14,58 @@
   <body>
     <div class="container mt-4">
       <div class="row">
-        <div class="col"></div>
+        <div class="col">
+          <div>
+            <a
+              href="#content1"
+              class="btn btn-success"
+              data-bs-toggle="collapse"
+              >Link</a
+            >
+            <button
+              class="btn btn-primary"
+              data-bs-toggle="collapse"
+              data-bs-target="#content2"
+            >
+              Buton
+            </button>
+            <a
+              href=".multi-collapse"
+              class="btn btn-success"
+              data-bs-toggle="collapse"
+              >Link</a
+            >
+            <button
+              class="btn btn-primary"
+              data-bs-toggle="collapse"
+              data-bs-target=".multi-collapse"
+            >
+              Buton
+            </button>
+          </div>
+          <div style="max-height: 100px">
+            <div
+              class="collapse mt-3 collapse-horizontal multi-collapse"
+              id="content1"
+            >
+              <div class="card card-body" style="width: 300px">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Laboriosam, minus.
+              </div>
+            </div>
+          </div>
+          <div style="max-height: 100px">
+            <div
+              class="collapse mt-3 collapse-horizontal multi-collapse"
+              id="content2"
+            >
+              <div class="card card-body" style="width: 300px">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Laboriosam, minus.
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <script
